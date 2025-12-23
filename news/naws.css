@@ -131,14 +131,10 @@
 
 .news-carousel {
   display: block !important;
-  overflow: visible !important;
+  overflow: hidden !important;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .news-carousel {
-    overflow: hidden !important;
-  }
-
   .news-carousel .swiper-wrapper {
     overflow: visible !important;
   }
