@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="480" viewBox="0 0 480 480" role="img" aria-labelledby="title desc">
+  <title id="title">1986 홈페이지 리뉴얼 알림</title>
+  <desc id="desc">검은 배경 위에 대개편과 1986 홈페이지 리뉴얼 문구가 적힌 안내 이미지</desc>
+  <rect width="480" height="480" fill="#0a0a0a" />
+  <text x="240" y="86" fill="#ffffff" font-family="'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">대개편~!</text>
+  <text x="240" y="192" fill="#ffffff" font-family="'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif" font-size="88" font-weight="800" text-anchor="middle">1986</text>
+  <text x="240" y="292" fill="#ffffff" font-family="'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="800" text-anchor="middle">홈페이지</text>
+  <text x="240" y="392" fill="#ffffff" font-family="'Noto Sans KR', 'Helvetica Neue', Arial, sans-serif" font-size="72" font-weight="800" text-anchor="middle">리뉴얼!!</text>
+</svg>
