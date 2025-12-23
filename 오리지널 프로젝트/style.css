@@ -92,7 +92,6 @@ main.work-page {
   margin: 0 auto;
   padding: 4rem 4vw var(--work-bottom-gap, clamp(60px, 8vw, 100px));
 }
-
 .section {
   position: relative;
   scroll-margin-top: 60px;
