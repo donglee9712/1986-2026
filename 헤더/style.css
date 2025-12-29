@@ -112,7 +112,7 @@ body.nav-locked {
   content: "";
   position: absolute;
   width: 26px;
-  height: 2px;
+  height: 2.5px;
   border-radius: 999px;
   background: #ffffff;
 }

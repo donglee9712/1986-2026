@@ -476,6 +476,10 @@ body.embed-shell .embedded-home {
   padding: 0;
 }
 
+.partners-inner--first {
+  margin-top: 50px;
+}
+
 .partners-heading {
   margin: 0 0 12px;
   font-size: 1.25rem;
@@ -575,7 +579,7 @@ body.embed-shell .embedded-home {
 .apply-feature {
   width: 100%;
   max-width: 1800px;
-  margin: 0 auto;
+  margin: 30px auto 0;
   padding: 0;
   background: transparent;
   text-align: center;
@@ -606,7 +610,7 @@ body.embed-shell .embedded-home {
   transform-style: preserve-3d;
   will-change: transform, box-shadow;
   transition: transform 0.45s ease-out, box-shadow 0.3s ease-out, opacity 0.5s ease-out;
-  transition-delay: var(--reveal-delay, 0ms);
+  transition-delay: 0ms, 0ms, var(--reveal-delay, 0ms);
 }
 
 .apply-feature-image {
