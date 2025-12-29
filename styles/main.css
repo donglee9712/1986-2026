@@ -99,6 +99,36 @@ p {
   margin-top: 0;
 }
 
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  z-index: 2000;
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+.page-loader.is-hidden {
+  opacity: 0;
+}
+
+.page-loader__spinner {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.12);
+  border-top-color: #111111;
+  animation: page-loader-spin 0.9s linear infinite;
+}
+
+@keyframes page-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .content-columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));

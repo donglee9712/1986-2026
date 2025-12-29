@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="news/swiper.css" />
     <link rel="stylesheet" href="news/naws.css" />
   </head>
-  <body class="about-page">
+  <body class="about-page is-loading">
+    <div class="page-loader" aria-hidden="true">
+      <div class="page-loader__spinner"></div>
+    </div>
     <div data-coco-nav data-nav-root="./">
       <header class="top-nav">
         <a class="top-nav__logo" data-page="index.html" href="#">
@@ -1907,6 +1910,15 @@
         );
 
         yearSections.forEach((section) => observer.observe(section));
+      });
+    </script>
+    <script>
+      window.addEventListener("load", () => {
+        document.body.classList.remove("is-loading");
+        const loader = document.querySelector(".page-loader");
+        if (!loader) return;
+        loader.classList.add("is-hidden");
+        setTimeout(() => loader.remove(), 450);
       });
     </script>
     <script>

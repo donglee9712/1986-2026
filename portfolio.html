@@ -862,6 +862,9 @@
       <div class="work-drawer__backdrop" data-drawer-close></div>
       <div class="work-drawer__panel" role="dialog" aria-modal="true" aria-label="Project detail">
         <button class="work-drawer__close footer-modal__close" type="button" data-drawer-close aria-label="닫기">&times;</button>
+        <div class="work-drawer__loading" aria-hidden="true">
+          <div class="work-drawer__spinner"></div>
+        </div>
         <iframe class="work-drawer__frame" title="Project detail"></iframe>
       </div>
     </div>
@@ -1012,6 +1015,7 @@
 
         const closeTargets = drawer.querySelectorAll("[data-drawer-close]");
         const frame = drawer.querySelector(".work-drawer__frame");
+        const loading = drawer.querySelector(".work-drawer__loading");
 
         const openDrawer = (url) => {
           if (!frame) return;
@@ -1019,6 +1023,7 @@
           drawer.classList.add("is-open");
           drawer.setAttribute("aria-hidden", "false");
           document.body.classList.add("is-drawer-open");
+          loading?.classList.add("is-active");
         };
 
         const closeDrawer = () => {
@@ -1026,6 +1031,7 @@
           drawer.setAttribute("aria-hidden", "true");
           document.body.classList.remove("is-drawer-open");
           if (frame) frame.src = "about:blank";
+          loading?.classList.remove("is-active");
         };
 
         grid.addEventListener("click", (event) => {
@@ -1038,6 +1044,10 @@
         });
 
         closeTargets.forEach((target) => target.addEventListener("click", closeDrawer));
+
+        frame?.addEventListener("load", () => {
+          loading?.classList.remove("is-active");
+        });
 
         document.addEventListener("keydown", (event) => {
           if (event.key === "Escape" && drawer.classList.contains("is-open")) {

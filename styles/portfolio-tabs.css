@@ -100,7 +100,7 @@ body.is-drawer-open {
   background: #ffffff;
   box-shadow: 28px 0 80px rgba(0, 0, 0, 0.18);
   transform: translateX(100%);
-  transition: transform 0.4s ease;
+  transition: transform 0.9s ease;
   display: flex;
   flex-direction: column;
   z-index: 1000;
@@ -119,6 +119,40 @@ body.is-drawer-open {
 .work-drawer__panel .footer-modal__close {
   left: 16px;
   right: auto;
+}
+
+.work-drawer__loading {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.96);
+  color: #111111;
+  font-size: 0.95rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.work-drawer__loading.is-active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.work-drawer__spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid rgba(0, 0, 0, 0.15);
+  border-top-color: #111111;
+  animation: work-drawer-spin 1.17s linear infinite;
+}
+
+@keyframes work-drawer-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Tablet + mobile layout */

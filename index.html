@@ -70,7 +70,7 @@
       </div>
     </section>
 
-    <div class="news-shell">
+    <div class="news-shell is-init-hidden">
       <div class="home-news">
         <div class="section-header">
           <h1><a href="#" onclick="return false;">삶을 더 재밌게 만드는 "1986"</a></h1>
@@ -206,6 +206,9 @@
             1800: { slidesPerView: 2 },
           },
         });
+
+        newsShell.classList.remove("is-init-hidden");
+        newsShell.classList.add("is-ready");
       });
     </script>
     <script>
