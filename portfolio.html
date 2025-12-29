@@ -189,7 +189,7 @@
           <a class="work-card__link" href="https://1986.imweb.me/250520"><div class="work-card__image" aria-hidden="true" style="--card-bg: url('https://cdn.imweb.me/thumbnail/20250619/9c0d5d7c25660.png');"></div></a>
         </article>
         <article class="work-card" data-category="brand-ngo">
-          <a class="work-card__link" href="https://www.1986.co.kr/0821"><div class="work-card__image" aria-hidden="true" style="--card-bg: url('https://cdn.imweb.me/thumbnail/20250825/48dd92a216822.jpg');"></div></a>
+          <a class="work-card__link" href="//"><div class="work-card__image" aria-hidden="true" style="--card-bg: url('https://cdn.imweb.me/thumbnail/20250825/48dd92a216822.jpg');"></div></a>
         </article>
         <article class="work-card" data-category="brand-ngo">
           <a class="work-card__link" href="https://1986.imweb.me/241114"><div class="work-card__image" aria-hidden="true" style="--card-bg: url('https://cdn.imweb.me/thumbnail/20241220/f3db40f894b23.png');"></div></a>
@@ -1031,6 +1031,7 @@
         grid.addEventListener("click", (event) => {
           const link = event.target.closest(".work-card__link");
           if (!link) return;
+          if (link.closest(".work-card--video")) return;
           if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button === 1) return;
           event.preventDefault();
           openDrawer(link.href);

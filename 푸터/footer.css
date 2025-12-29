@@ -231,6 +231,7 @@ a {
   line-height: 0;
   cursor: pointer;
   padding: 0;
+  box-shadow: none;
 }
 
 .footer-modal__close::before,
@@ -240,7 +241,7 @@ a {
   width: 26px;
   height: 2.5px;
   border-radius: 999px;
-  background: #111111;
+  background: #000000;
 }
 
 .footer-modal__close::before {
